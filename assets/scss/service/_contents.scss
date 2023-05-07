@@ -1,0 +1,153 @@
+.service-contents {
+    @include section-base(20px, $grayWhiteColor);
+    color      : $grayColor-500;
+    font-family: Oswald;
+    font-style : normal;
+    font-size  : 1.14rem;
+
+    input[type="checkbox"] {
+        display: none;
+
+        &:checked {
+            ~.service__popup-contact {
+                display: block;
+                z-index: 100;
+            }
+        }
+    }
+
+    .service-contents__right {
+        img {
+            width        : 100%;
+            margin-bottom: 20px;
+        }
+
+        .service-contents--desc {
+
+            line-height   : 24px;
+            padding-bottom: 20px;
+            border-bottom : 2px solid $grayColor-50;
+        }
+
+        .service-contents__contacts {
+
+
+            .service-contacts__lists {
+
+
+
+                .service-contacts__item {
+                    display    : flex;
+                    align-items: start;
+                    cursor     : pointer;
+                    z-index    : 1;
+
+                    .service-item--image {
+                        width        : 50px;
+                        height       : 50px;
+                        border-radius: 50%;
+                        position     : relative;
+                        top          : 22px;
+
+                        &::after {
+                            content         : '';
+                            display         : inline-block;
+                            width           : 6px;
+                            height          : 6px;
+                            background-color: #2ECC71;
+                            border          : 1.6px solid $grayWhiteColor;
+                            border-radius   : 50%;
+                            position        : absolute;
+                            bottom          : 7px;
+                            right           : 3px;
+                            z-index         : 100;
+                        }
+                    }
+
+                    .service-item--info {
+                        margin : 0 10px;
+                        padding: 12px 0;
+
+                        h3 {
+                            color: $grayColor-500;
+                        }
+
+                        p {
+                            margin-bottom: 0;
+                            font-size    : 0.86rem;
+                            color        : $grayColor-300;
+                            line-height  : 16px;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    .service-contents__left {
+        color: #123472;
+
+        .service__orthers {
+            background-color: $grayColor-25;
+            padding         : 24px 20px 20px 20px;
+            margin-bottom   : 24px;
+
+            h3 {
+                text-transform: uppercase;
+                margin-bottom : 15px;
+            }
+
+            ul.service__orthers--menu {
+                li {
+                    width           : 100%;
+                    background-color: $grayWhiteColor;
+                    margin-bottom   : 15px;
+
+                    a {
+                        display: block;
+                        padding: 8px;
+                    }
+                }
+            }
+        }
+
+        .service__request {
+            background-color: $grayColor-25;
+            padding         : 16px;
+            margin-bottom   : 24px;
+
+            h3 {
+                text-transform: uppercase;
+                margin-bottom : 15px;
+            }
+
+            input {
+                width: 100%;
+
+            }
+
+            textarea {
+                @extend input;
+                resize: none;
+            }
+
+            .form__service {
+                overflow: hidden;
+                width   : 100%;
+
+                button {
+                    margin-left : auto;
+                    margin-right: auto;
+                    text-align  : center;
+                    display     : block;
+                }
+            }
+
+        }
+
+        .service__check-shipment {
+            @extend .service__request;
+        }
+    }
+}

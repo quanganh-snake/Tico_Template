@@ -1,0 +1,19 @@
+.customers-box {
+    @include section-base(50px, $grayWhiteColor);
+    @include center(80%);
+
+    h2 {
+        @include textChange(700, 3.43rem);
+        @include section__heading;
+    }
+
+    .customers-box__lists {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 80px;
+        .customers-box__item {
+            margin-left: 100px;
+        }
+    }
+}

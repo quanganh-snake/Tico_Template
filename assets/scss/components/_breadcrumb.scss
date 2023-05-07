@@ -1,0 +1,33 @@
+.breadcrumbs {
+    @include section-base(28px, $grayWhiteColor);
+
+    ul {
+        display: flex;
+
+        li {
+            display: flex;
+            a {
+                color  : $grayColor-300;
+                display: block;
+            }
+
+            &+li {
+                &::before {
+                    content         : '';
+                    position        : relative;
+                    top             : 8px;
+                    width           : 10px;
+                    height          : 1px;
+                    background-color: $grayColor-300;
+                    margin: 0 10px;
+                }
+            }
+
+            &:last-child {
+                a {
+                    color: $grayColor-500;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,55 @@
+.service-box {
+    @include section-base(50px, #f7f7f7);
+
+    h2 {
+        @include textChange(700, 3.43rem);
+        @include section__heading;
+    }
+
+    .service-box__lists {
+
+        .service-box__lists--flex {
+            display        : flex;
+            flex-wrap      : wrap;
+            align-items    : center;
+            justify-content: center;
+        }
+
+        .service-box--item {
+            display         : block;
+            background-color: $grayWhiteColor;
+            width           : 100%;
+            height          : auto;
+            padding         : 24px;
+            text-align      : center;
+            margin-bottom   : 20px;
+
+            &:hover {
+                background-color: #123472;
+                cursor          : pointer;
+            }
+
+            img {}
+
+            h3 {
+                @include textChange(600, 1.7rem);
+                text-transform: uppercase;
+            }
+
+            .item--desc {
+                @include textChange(400, 1rem);
+                color        : $grayColor-200;
+                height       : 120px;
+                margin-bottom: 32px;
+            }
+
+            .service-box__button {}
+        }
+
+        .service-box__last {
+            display        : flex;
+            justify-content: center;
+            align-items    : center;
+        }
+    }
+}

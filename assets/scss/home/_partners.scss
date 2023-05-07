@@ -1,0 +1,57 @@
+.partners-box {
+    @include section-base(50px, #f7f7f7);
+    position: relative;
+
+    h2 {
+        @include textChange(700, 3.43rem);
+        @include section__heading;
+    }
+
+    .partners-box__lists {
+        display        : flex;
+        justify-content: center;
+        overflow       : hidden;
+        width          : 90%;
+        margin         : 0 auto;
+
+        li {
+            a {
+                display         : block;
+                width           : 200px;
+                height          : 200px;
+                margin          : 0 23px;
+                background-color: $grayWhiteColor;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .partners-box__controls {
+        .partners-box__controls--prev::before {
+            content   : '';
+            position  : absolute;
+            display   : block;
+            width     : 48px;
+            height    : 48px;
+            background: url('/assets/images/icons/arrow-left-primary.png') no-repeat center #fff;
+            cursor    : pointer;
+            top       : 68px;
+            right     : 240px;
+        }
+
+        .partners-box__controls--next::after {
+            content   : '';
+            position  : absolute;
+            display   : block;
+            width     : 48px;
+            height    : 48px;
+            background: url('/assets/images/icons/arrow-right-primary.png') no-repeat center #fff;
+            cursor    : pointer;
+            top       : 68px;
+            right     : 180px;
+        }
+    }
+}

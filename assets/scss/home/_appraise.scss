@@ -1,0 +1,75 @@
+.appraise-box {
+    @include section-base(50px, $grayWhiteColor);
+    @include center(80%);
+
+    background         : url('/assets/images/background/bgr_appraise.png') no-repeat;
+    background-size    : 100%;
+    background-position: center;
+
+    h2 {
+        @include textChange(700, 3.43rem);
+        @include section__heading;
+    }
+
+    .appraise-box__lists {
+        margin-bottom: 30px;
+
+        .appraise-box__item {
+            background-color: $grayWhiteColor;
+            width           : 100%;
+            padding         : 24px;
+            box-shadow      : 8px 8px 24px rgba(0, 0, 0, 0.1);
+            position        : relative;
+
+            &::after {
+                content : url('/assets/images/icons/quotation-mark.png');
+                position: absolute;
+                top     : 14px;
+                right   : 32px;
+            }
+
+            &>.item--desc {
+                margin: 20px 0;
+            }
+
+            .item__person {
+
+                display: flex;
+
+                .item__person--info {
+                    padding: 0 12px;
+
+                    p {
+                        color: $primaryColor-500;
+                    }
+                }
+
+                &::before {
+                    content        : '';
+                    position       : relative;
+                    width          : 48px;
+                    height         : 48px;
+                    background     : url('/assets/images/avatar/avatar.png') no-repeat;
+                    background-size: 100%;
+                    top            : 10px;
+                    left           : 0;
+                }
+            }
+        }
+
+        .appraise-box--active {
+            background-color: $primaryColor-500;
+            color           : $grayWhiteColor;
+
+            .item__person {
+                .item__person--info {
+
+                    h3,
+                    p {
+                        color: $grayWhiteColor;
+                    }
+                }
+            }
+        }
+    }
+}

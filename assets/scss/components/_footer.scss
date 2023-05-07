@@ -1,0 +1,107 @@
+.footer {
+    @include section-base(60px, #123472);
+
+    .footer--heading {
+        color         : $grayWhiteColor;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size     : 1.7rem;
+        margin-bottom : 24px;
+    }
+
+    .footer--desc {
+        color: $grayColor-200;
+        a {
+            color: $grayColor-200;
+        }
+    }
+
+    .footer-top {
+        margin-bottom: 70px;
+        align-items  : center;
+
+        .footer-top__image {
+            width: 100%;
+        }
+
+        .footer-top__desc {
+            p {
+                color  : $grayColor-200;
+                display: block;
+            }
+        }
+    }
+
+    .footer-under {
+
+        .footer-under__office {
+            .office--heading {}
+
+            .office__info {
+                .office__info--title {
+                    color        : $grayWhiteColor;
+                    margin-bottom: 10px;
+                }
+
+                .office__info--desc {
+                    @extend .footer--desc;
+                }
+            }
+        }
+
+        .footer-under__more-info {
+            .more-info__our-service {
+                .our-service--heading {}
+
+                .footer__service--desc {
+                    @extend .footer--desc;
+                }
+            }
+
+            .more-info__news {
+                .footer__news--desc {
+                    @extend .footer--desc;
+                }
+            }
+
+            .more-info__blog {
+                .footer__blog--desc {
+                    @extend .footer--desc;
+                }
+            }
+
+            .more-info__about-us {
+                .footer__about-us--desc {
+                    @extend .footer--desc;
+                }
+            }
+
+            .more-info__policy {
+                .policy__socials {
+                    display      : flex;
+                    margin-bottom: 10px;
+
+                    li {
+                        margin-right: 24px;
+                    }
+                }
+
+                a {
+                    color          : $grayColor-200;
+                    font-size      : 1rem;
+                    display        : block;
+                    width          : 100%;
+                    text-decoration: underline;
+                    margin-bottom  : 10px;
+                }
+            }
+        }
+    }
+
+    .footer--nocopy {
+        text-align: center;
+        color     : #fff;
+        margin-top: 60px;
+    }
+
+}

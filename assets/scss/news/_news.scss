@@ -1,0 +1,164 @@
+.news-box {
+    .news-box__search {
+        .search--end {
+            justify-content: flex-end;
+
+            input {
+                border       : 1px solid $grayColor-100;
+                margin-bottom: 14px;
+            }
+
+            .search {
+                position: relative;
+
+                &::after {
+                    content        : '';
+                    display        : block;
+                    width          : 15px;
+                    height         : 15px;
+                    color          : red;
+                    position       : absolute;
+                    background     : url('/assets/images/icons/search-normal.png') no-repeat;
+                    background-size: 100%;
+                    top            : 16px;
+                    right          : 20px;
+                }
+            }
+        }
+    }
+
+    .news-box__header {
+        .header--main {
+            position     : relative;
+            padding-right: 10px;
+
+            img {
+                width: 100%;
+            }
+
+            .header--main__info {
+                @include news-info(80%, 3%, 1.72rem);
+            }
+        }
+
+        .header--concern__lists {
+            position: relative;
+
+            .header--concern__item {
+                margin-bottom: 30px;
+
+                img {
+                    width : 100%;
+                    height: 194px;
+                }
+
+                &:nth-child(1) {
+                    .item--info {
+                        @include news-info(16%, 0, 1rem);
+                        padding: 0 24px;
+                    }
+                }
+
+                &:nth-child(2) {
+                    .item--info {
+                        @include news-info(70%, 0, 1rem);
+                        padding: 0 24px;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .news-box__related {
+        h2 {
+            margin-bottom: 24px;
+        }
+
+        .related__list {
+            .related__item {
+                display      : flex;
+                margin-bottom: 24px;
+
+                img {
+                    margin-right: 28px;
+                }
+
+                .item--content {
+                    width: 45%;
+
+                    h3 {
+                        margin-top   : 0;
+                        margin-bottom: 4px;
+                        font-weight  : bold;
+                    }
+
+                    .news--time {
+                        @include news-time;
+                    }
+                }
+
+            }
+
+            .related__page {
+                display        : flex;
+                justify-content: center;
+                align-items    : center;
+                margin-bottom  : 32px;
+
+                .btn-arrow__left {
+                    @include btn-arrow;
+                    cursor: pointer;
+
+                    &::before {
+                        content    : url('/assets/images/icons/arrow-left_outline.png');
+                        display    : inline-block;
+                        line-height: 44px;
+                    }
+                }
+
+                .btn-arrow__right {
+                    @include btn-arrow;
+                    cursor: pointer;
+
+                    &::after {
+                        content    : url('/assets/images/icons/arrow-right_outline.png');
+                        display    : inline-block;
+                        line-height: 44px;
+                    }
+                }
+
+                ul {
+                    display        : flex;
+                    justify-content: center;
+                    align-items    : center;
+
+                    li {
+                        @include btn-arrow;
+                        margin         : 0 8px;
+                        cursor         : pointer;
+                        display        : flex;
+                        align-items    : center;
+                        justify-content: center;
+
+                        &.active {
+                            background-color: $infoColor-900;
+
+                            a {
+                                color: $grayWhiteColor;
+                            }
+                        }
+
+                        &:hover {
+                            background-color: $infoColor-900;
+
+                            a {
+                                color: $grayWhiteColor;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

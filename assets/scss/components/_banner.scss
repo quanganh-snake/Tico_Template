@@ -1,0 +1,71 @@
+.banner-box {
+    position: relative;
+
+    .banner-box--inner {
+        position: relative;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .banner-box--content {
+        position  : absolute;
+        left      : 25%;
+        top       : 26%;
+        right     : 25%;
+        width     : 50%;
+        color     : $grayWhiteColor;
+        text-align: center;
+
+        .content--title {
+            font-size: 2.57rem;
+        }
+
+        .content--heading {
+            font-size     : 6rem;
+            font-weight   : 700;
+            letter-spacing: 3px;
+            color         : $grayWhiteColor;
+            text-transform: uppercase;
+        }
+
+        .content--desc {
+            font-size  : 1.43rem;
+            line-height: 32px;
+            font-weight: 400;
+        }
+    }
+
+    .service--name {
+        position: absolute;
+        top     : 50%;
+        left    : 13%;
+        display: flex;
+        align-items: center;
+        
+        img {
+            margin-right: 10px;
+        }
+
+        p {
+            font-size     : 3.29rem;
+            text-transform: uppercase;
+            font-weight   : 700;
+            display: block;
+            margin-bottom: 0;
+            // &::before {
+            //     content        : '';
+            //     display        : inline-block;
+            //     width          : 37px;
+            //     height         : 37px;
+            //     background     : url('/assets/images/icons/icon-air_freight.svg') no-repeat;
+            //     background-size: 100%;
+            //     position       : relative;
+            //     top            : 0;
+            //     left           : 0;
+            //     margin-right   : 8px;
+            // }
+        }
+    }
+}

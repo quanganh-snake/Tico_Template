@@ -1,0 +1,93 @@
+@mixin section-base ($space, $backgroundColor) {
+    padding         : $space 0;
+    background-color: $backgroundColor;
+}
+
+@mixin section__heading {
+    text-transform: uppercase;
+    text-align    : center;
+    margin-bottom : 36px;
+}
+
+@mixin textChange ($fontWeight, $fontSize) {
+    font-weight: $fontWeight;
+    font-size  : $fontSize;
+}
+
+@mixin header-contact ($pathIcon) {
+    &::before {
+        content        : '';
+        background     : url($pathIcon) no-repeat;
+        background-size: 100% 100%;
+        display        : block;
+        position       : relative;
+        width          : 20px;
+        height         : 20px;
+        left           : -24px;
+        top            : 20px;
+        margin-top     : -20px;
+    }
+}
+
+@mixin center ($width) {
+    max-width: $width;
+    margin   : 0 auto;
+}
+
+@mixin button-partner($top) {
+    position     : absolute;
+    top          : $top;
+    transform    : translateY(-50%);
+    width        : 50px;
+    height       : 50px;
+    border-radius: 50%;
+    cursor       : pointer;
+}
+
+@mixin btn-arrow {
+    width           : 40px;
+    height          : 40px;
+    border          : 1px solid $grayColor-100;
+    border-radius   : 50%;
+    background-color: transparent;
+}
+
+@mixin rectangle-button ($background, $color: $textColor, $border: none) {
+    background : $background;
+    color      : $color;
+    width      : 48px;
+    height     : 48px;
+    cursor     : pointer;
+    border     : $border;
+    font-size  : 1.5rem;
+    font-weight: 600;
+}
+
+@mixin news-info($top, $left, $sizeTitle) {
+    position: absolute;
+    top     : $top;
+    left    : $left;
+
+    h3,
+    h4 {
+        color         : $grayWhiteColor;
+        font-size     : $sizeTitle;
+        font-weight   : bold;
+        letter-spacing: 1px;
+        word-spacing  : 1px;
+        line-height   : 24px;
+    }
+
+    p {
+        color      : $grayWhiteColor;
+        font-size  : 1rem;
+        font-weight: 400;
+        font-style : initial;
+    }
+}
+
+@mixin news-time {
+    color      : $grayColor-300;
+    font-style : normal;
+    font-weight: 400;
+}

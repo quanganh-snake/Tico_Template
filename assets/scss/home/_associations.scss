@@ -1,0 +1,41 @@
+.associations-box {
+    @include section-base(50px, $grayWhiteColor);
+    @include center(80%);
+    background-color: $grayWhiteColor;
+
+    h2 {
+        @include textChange(700, 3.43rem);
+        @include section__heading;
+    }
+
+    .associations-box__lists {
+        .lists__inner {
+            &:first-child {
+                border-bottom: 1px solid $grayColor-100;
+            }
+
+            div {
+                &:nth-child(1) {
+                    div {
+                        &:nth-child(1) {
+                            border-left: 1px solid #fff;
+                        }
+
+                        &:nth-child(5) {
+                            border-left: 1px solid #fff;
+                        }
+                    }
+                }
+            }
+        }
+
+        .associations-box__item {
+            border-left: 1px solid $grayColor-100;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+}

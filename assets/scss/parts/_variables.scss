@@ -1,0 +1,85 @@
+// System Colors
+
+$colorCommon: #123472;
+
+/*===Brand Color: Primary===*/
+$primaryColor-100: #FADCCB;
+$primaryColor-200: #F6B298;
+$primaryColor-300: #E67B62;
+$primaryColor-400: #CD493A;
+$primaryColor-500: #AD0B08;
+$primaryColor-600: #94050F;
+$primaryColor-700: #7C0416;
+$primaryColor-800: #640219;
+$primaryColor-900: #53011B;
+
+/*===Semantic Color: Success, Warning, Danger, Info, Gray===*/
+// Success
+$successColor-100: #D1F5A5;
+$successColor-200: #D1F5A5;
+$successColor-300: #A9E174;
+$successColor-400: #7FC44D;
+$successColor-500: #4C9E1E;
+$successColor-600: #378715;
+$successColor-700: #26710F;
+$successColor-800: #175B09;
+$successColor-900: #0D4B05;
+// Warning
+$warningColor-100: #FCFBCB;
+$warningColor-200: #F9F798;
+$warningColor-300: #EFEB64;
+$warningColor-400: #E0DB3D;
+$warningColor-500: #CCC506;
+$warningColor-600: #AFA804;
+$warningColor-700: #928C03;
+$warningColor-800: #767001;
+$warningColor-900: #615D01;
+// Danger
+$dangerColor-100 : #FAD8CD;
+$dangerColor-200 : #F6AB9E;
+$dangerColor-300 : #E4706A;
+$dangerColor-400 : #CA4248;
+$dangerColor-500 : #A81226;
+$dangerColor-600 : #900D2A;
+$dangerColor-700 : #78092C;
+$dangerColor-800 : #61052B;
+$dangerColor-900 : #50032A;
+// Info
+$infoColor-100   : #CBE6FB;
+$infoColor-200   : #98CAF7;
+$infoColor-300   : #63A2E7;
+$infoColor-400   : #3B7DD0;
+$infoColor-500   : #084CB2;
+$infoColor-600   : #053A99;
+$infoColor-700   : #042B80;
+$infoColor-800   : #021E67;
+$infoColor-900   : #011555;
+// Gray
+$grayWhiteColor  : #FFFFFF;
+$grayColor-25    : #F7F7F7;
+$grayColor-50    : #f4f4f4;
+$grayColor-100   : #BEBEBE;
+$grayColor-200   : #9F9F9F;
+$grayColor-300   : #737373;
+$grayColor-400   : #585858;
+$grayColor-500   : #2E2E2E;
+$grayColor-600   : #2A2A2A;
+$grayColor-700   : #212121;
+$grayColor-800   : #191919;
+$grayColor-900   : #131313;
+
+
+// Fonts
+// Font Family
+$fontFamily: Oswald,
+san-serif; //Font chữ mặc định
+// Font size
+$fontSize: 14px; // font-size mặc định
+
+// Text
+// Heading Color
+$headingColor: #123472;
+// Text Color:
+$textColor   : $colorCommon;
+// Link Color
+$linkColor   : $infoColor-700;

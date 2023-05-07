@@ -1,0 +1,8 @@
+.contactus-box {
+    @include section-base(0px, #fff);
+    margin-bottom: -2px;
+
+    img {
+        width: 100%;
+    }
+}

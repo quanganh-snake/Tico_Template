@@ -1,0 +1,125 @@
+.header {
+  .topbar {
+    background-color: $colorCommon;
+
+    .topbar--social {
+      display: flex;
+      justify-content: flex-end;
+
+      .social--lists {
+        background-color: $primaryColor-500;
+        display: flex;
+        padding: 10px 14px;
+
+        & > li + li {
+          a {
+            display: block;
+            margin-left: 24px;
+          }
+        }
+      }
+    }
+  }
+
+  .header-inner {
+    max-height: 96px;
+
+    .header-inner__lists {
+      position: relative;
+
+      .header-inner__logo {
+        a {
+          display: block;
+          padding: 16px 0 18px 0;
+        }
+      }
+
+      .header-inner__contacts {
+        padding: 16px 0 56px 0;
+        font-family: Oswald;
+
+        .contact__phone {
+          @include header-contact("/assets/images/icons/call.png");
+        }
+
+        .contact__email {
+          @include header-contact("/assets/images/icons/sms.png");
+        }
+
+        .contact__address {
+          @include header-contact("/assets/images/icons/location-primary.png");
+        }
+
+        .contact__title {
+          color: $grayColor-300;
+          font-size: 0.86rem;
+        }
+      }
+
+      .header__menu {
+        position: absolute;
+        background-color: $primaryColor-500;
+        top: 60px;
+        right: 0;
+        z-index: 100;
+
+        a {
+          display: block;
+          padding: 16px 26px;
+          font-size: 1.14rem;
+          font-family: Oswald;
+        }
+
+        & > ul {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+
+          & > li {
+            display: inline-block;
+            position: relative;
+
+            ul {
+              display: none;
+              position: absolute;
+              background-color: $grayWhiteColor;
+              border-top: 5px solid #123472;
+              min-width: 196px;
+              top: 100%;
+              left: 20%;
+            }
+
+            & > a {
+              color: $grayWhiteColor;
+              text-transform: uppercase;
+              display: flex;
+              align-items: center;
+            }
+
+            &:hover ul {
+              display: block;
+              transition: bottom 0.5s linear;
+            }
+
+            &:nth-child(7) {
+              a {
+                padding: 6px 2px 6px 8px;
+                border: 1px solid $grayWhiteColor;
+                margin: 0 32px;
+              }
+            }
+
+            &:last-child {
+              a {
+                background-color: $primaryColor-700;
+                padding: 14px 24px;
+                margin-right: 4px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
